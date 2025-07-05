@@ -22,3 +22,4 @@ A simple Pokédex app built with **HTML**, **CSS**, and **Vanilla JavaScript**, 
 - Fetch API  
 - DOM Manipulation  
 - [PokeAPI](https://pokeapi.co) (for live Pokémon data)
+.
