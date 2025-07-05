@@ -14,10 +14,6 @@ A simple Pokédex app built with **HTML**, **CSS**, and **Vanilla JavaScript**, 
 
 👉 link:https://shogo177.github.io/pokedex.search/           
 
-## 📸 Screenshot
-
-![Pokédex Demo](./screenshot.png)
-
 ## 🔧 Technologies Used
 
 - HTML5  
