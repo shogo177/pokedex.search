@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokémon Search</title>
+  <style>
+    body {
+      background: url('pokedeximage.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .pokedex {
+      background-color: #fff;
+      border: 10px solid #222;
+      border-radius: 20px;
+      padding: 20px;
+      width: 515px;
+      height: 322px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+      margin-left: 237px;
+      margin-top: -110px;
+      overflow: hidden;
+    }
+
+    #pokemonInfo {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-top: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    input {
+      padding: 8px;
+      width: 80%;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 8px 12px;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #pokemonInfo img {
+      width: 150px;
+      border-radius: 10px;
+      border: 2px solid #222;
+    }
+
+    #error {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* 📱 Mobile-Specific Styles */
+    @media (max-width: 600px) {
+      body {
+        background: #f44336; /* fallback background color for mobile */
+        justify-content: center;
+        align-items: flex-start;
+        overflow-y: auto;
+        padding-top: 30px;
+      }
+
+      .pokedex {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-top: 0;
+      }
+
+      input, button {
+        width: 90%;
+        margin: 5px auto;
+      }
+
+      #pokemonInfo {
+        max-height: 250px;
+      }
+
+      #pokemonInfo img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pokedex">
+    <h1>🔎 Pokédex</h1>
+    <input type="text" id="pokemonInput" placeholder="Enter Pokémon name or ID" />
+    <button onclick="searchPokemon()">Search</button>
+
+    <div id="pokemonInfo">
+      <!-- Pokémon info shows here -->
+    </div>
+
+    <p id="error"></p>
+  </div>
+
+  <script src="pokemonJS.js"></script>
+</body>
+</html>
