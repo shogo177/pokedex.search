@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokémon Search</title>
+  <!--pikachu//bulbasaur-->
+  <style>
+   body {
+  background: url('pokedeximage.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* 🚫 Disable page scroll */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+  .pokedex {
+  background-color: #fff;
+  border: 10px solid #222;
+  border-radius: 20px;
+  padding: 20px;
+  width: 515px;
+  height: 322px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  text-align: center;
+  margin-left: 237px;
+  margin-top: -110px;/* 👈 Adjust position in pokedex */
+  overflow: hidden;  /* ✅ Prevent scrollbars from showing here */
+}
+#pokemonInfo {
+  max-height: 200px; /* Or whatever looks clean */
+  overflow-y: auto;  /* ✅ Scrolls only when needed */
+  margin-top: 20px;
+}
+  h1 {
+    margin-top: 0;
+    color: #222;
+  }
+
+  input {
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 8px 12px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #pokemonInfo {
+    margin-top: 20px;
+  }
+
+  #pokemonInfo img {
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid #222;
+  }
+
+  #error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="pokedex">
+    <h1>🔎 Pokédex</h1>
+    <input type="text" id="pokemonInput" placeholder="Enter Pokémon name or ID" />
+    <button onclick="searchPokemon()">Search</button>
+
+    <div id="pokemonInfo">
+      <!-- Pokémon info shows here -->
+    </div>
+
+    <p id="error"></p>
+  </div>
+
+  <script src="pokemonJS.js"></script>
+</body>
+</html>
